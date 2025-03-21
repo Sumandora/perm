@@ -5,7 +5,7 @@ A coreutils-esque tool that generates all permutations of a set of inputs.
 ## Usage
 
 Elements to permutate are read from stdin.
-Permutations are delivered over stdout.  
+Permutations are delivered over stdout.
 
 > [!CAUTION]  
 > The amount of permutations grows by n! / (n-k)!  
@@ -15,9 +15,9 @@ Permutations are delivered over stdout.
 ### Arguments
 
 | Argument         | Shortform | Explanation                                       | Default       |
-|------------------|-----------|---------------------------------------------------|---------------|
+| ---------------- | --------- | ------------------------------------------------- | ------------- |
 | --k              | -k        | Amount of elements in one permutation             | Element count |
-| --delim          | -d        | Delimiter between input elements, read from stdin | "\n"          |
+| --delimiter      | -d        | Delimiter between input elements, read from stdin | "\n"          |
 | --elem-separator | -e        | Separator between elements in a permutation       | ""            |
 | --separator      | -s        | Separator between permutations                    | "\n"          |
 

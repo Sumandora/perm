@@ -11,7 +11,7 @@ struct Args {
 
     /// Delimiter between input elements, read from stdin
     #[arg(long, short, default_value = "\n")]
-    delim: String,
+    delimiter: String,
 
     /// Separator between elements in a permutation
     #[arg(long, short, default_value = "")]
@@ -33,11 +33,11 @@ fn main() {
     let mut inp = String::new();
     std::io::stdin().read_to_string(&mut inp).unwrap();
 
-    inp = match inp.strip_prefix(&args.delim) {
+    inp = match inp.strip_prefix(&args.delimiter) {
         Some(s) => s.to_owned(),
         None => inp,
     };
-    inp = match inp.strip_suffix(&args.delim) {
+    inp = match inp.strip_suffix(&args.delimiter) {
         Some(s) => s.to_owned(),
         None => inp,
     };
@@ -48,7 +48,7 @@ fn main() {
     };
 
     let elements = inp
-        .split(&args.delim)
+        .split(&args.delimiter)
         .filter(|s| !s.is_empty())
         .map(|s| s.to_owned())
         .collect::<Vec<_>>();
