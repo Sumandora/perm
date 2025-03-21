@@ -8,7 +8,7 @@ Elements to permutate are read from stdin.
 Permutations are delivered over stdout.  
 
 > [!CAUTION]  
-> The amount of permutations grows by $$ \frac{n!}{(n-k)!} $$
+> The amount of permutations grows by n! / (n-k)!  
 > Avoid generating permutations of large sets.  
 > Avoid using this in a loop.
 
